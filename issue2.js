@@ -3,6 +3,7 @@ while(true){
   
     if(name === "東京"){
         alert("正解です！");
+        break;
     } else {
         alert("不正解です！");
     }
