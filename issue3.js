@@ -1,4 +1,4 @@
-function ShowTask(tasks){
+function showTask(tasks){
     console.log("################");
     console.log("現在持っているタスク一覧");
     console.log("################");
@@ -8,15 +8,15 @@ function ShowTask(tasks){
     });
 }
 
-function AddTask(tasks){
+function addTask(tasks){
     const task = prompt("タスクは？");
     tasks.push(task);
 }
 
 const tasks = ['掃除', '買い物', '散歩'];
-ShowTask(tasks);
+showTask(tasks);
 
 while(true){    
-    AddTask(tasks);
-    ShowTask(tasks);
+    addTask(tasks);
+    showTask(tasks);
 }
