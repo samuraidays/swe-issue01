@@ -1,27 +1,40 @@
-function showTask(a){
-    console.log("################");
-    console.log("現在持っているタスク一覧");
-    console.log("################");
+function showTask(tasksnum){
+    console.log("################\n現在持っているタスク一覧\n################¥n");
 
-for (let i = 0; i < a.item.length; i++){
-    console.log(i+1 + ': ' + '[内容] ' + a.item[i] + ' [ジャンル] ' + a.genre[i]);
+for (let i = 0; i < tasksnum.length; i++){
+    console.log(`${i+1}: [内容] ${tasksnum[i].item} [ジャンル] ${tasksnum[i].genre}`);
 }}
 
-let tasks = {
-    item: ["机を片付ける", "牛乳を買う", "散歩する"],
-    genre: ["掃除", "買い物", "運動"]
+const task1 = {
+    item: "机を片付ける",
+    genre: "掃除"
 }
+
+const task2 = {
+    item: "牛乳を買う",
+    genre: "買い物"
+}
+
+const task3 = {
+    item: "散歩する",
+    genre: "運動"
+}
+
+const tasks = [task1, task2, task3];
 
 showTask(tasks);
 
 function addTask(tasks){
-    let item = prompt("タスクは？");
-    tasks.item.push(item);
-    let genre = prompt("ジャンルは？");
-    tasks.genre.push(genre);
+    const item = prompt("タスクは？");
+    const genre = prompt("ジャンルは？");
+    const newtask = {
+        item: item,
+        genre: genre
+    };
+    tasks.push(newtask);
 }
 
-while(true){    
+for (let i = 0; i < 1; i++) {
     addTask(tasks);
     showTask(tasks);
 }
