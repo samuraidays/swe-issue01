@@ -3,22 +3,22 @@ function showTask(tasksnum){
 
 for (let i = 0; i < tasksnum.length; i++){
     console.log(`${i+1}: [内容] ${tasksnum[i].item} [ジャンル] ${tasksnum[i].genre}`);
-}}
+}};
 
 const task1 = {
     item: "机を片付ける",
     genre: "掃除"
-}
+};
 
 const task2 = {
     item: "牛乳を買う",
     genre: "買い物"
-}
+};
 
 const task3 = {
     item: "散歩する",
     genre: "運動"
-}
+};
 
 const tasks = [task1, task2, task3];
 
@@ -32,9 +32,9 @@ function addTask(tasks){
         genre: genre
     };
     tasks.push(newtask);
-}
+};
 
 for (let i = 0; i < 1; i++) {
     addTask(tasks);
     showTask(tasks);
-}
+};
