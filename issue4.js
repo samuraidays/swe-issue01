@@ -34,7 +34,7 @@ function addTask(tasks){
     tasks.push(newtask);
 };
 
-for (let i = 0; i < 1; i++) {
-    addTask(tasks);
-    showTask(tasks);
-};
+
+addTask(tasks);
+showTask(tasks);
+
